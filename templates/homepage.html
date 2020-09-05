@@ -1,0 +1,159 @@
+{% extends 'layouts.html' %} {% block body %}
+
+<div class="nav">
+    <img id="logo" src="{{url_for('static',filename='images/ts.svg') }}" alt="logo goes here">
+    <ul>
+        <li class="btns active"><a href="#one">home</a> </li>
+        <li class="btns"><a href="#two">summarize</a></li>
+        <li class="btns"><a href="#three">about</a> </li>
+        <li class="btns"><a href="#four">meet us</a> </li>
+    </ul>
+</div>
+
+<div class="border_container">
+
+    <div class="wrapper">
+        <section class="one scts" id="one">
+            <div class="textcontent">
+                <h1> <span>extractive</span> <br> text summarizer.</h1><br>
+                <p><i>"Simplicity is the ultimate form of sophistication"</i>. Our services help you to achieve just that!!. Simplifying content from weblinks, plaintexts and pdfs is just a click away. <br>Let's get you started...</p>
+                <br><br><a class="redirect" href="#two">summarize</a>
+            </div>
+            <img src="{{url_for('static',filename='images/filter.svg') }}" alt=""></section>
+        </section>
+        <section class="two scts" id="two">
+            <div class="holder">
+                <form action="/scraper" method="POST">
+                    <input type="text" placeholder="URL must start with http:// or https://" name="urllink"><button type="submit" class="btn">fetch</button>
+                </form><br><br>
+                <form action="/summarizer" method="POST">
+
+                    <textarea id="" cols="30" rows="10" placeholder="enter text to be summarized here" name="plaintext"></textarea><button type="submit" class="btn">summarize</button>
+                    <br>
+
+                    <p class="for_sent">enter number of sentences<input type="text" class="sentences" placeholder="5" name="num" required></p>
+                </form><br><br><br>
+                <form action="/pdfsum" method="POST">
+
+                    <p class="for_pdf">Select pdf file </p><br><br><input type="file" id="file" name="file" accept=".pdf"><button type="submit" class="btn">compress</button><textarea id="content" name="contentpdf" cols="0" rows="0" style="visibility:hidden"></textarea>
+                </form>
+            </div>
+        </section>
+
+
+        <section class="three scts" id="three">
+            <div class="holder_three">
+                <h2>How Summarization works</h2><br><br>
+                <h4>Algorithm</h4>
+                <ol>
+                    <li>Eliminate stopwords(common words like is, the,etc) and punctuations.</li>
+                    <li>Identify most appearing word using max(count).</li>
+                    <li>Assign weights to each word by normalizing with highest appearing word.</li>
+                    <li>Assign weights to each sentence by adding the weights of each word in the sentence.</li>
+                    <li>Sort the sentences by weight in descending order.</li>
+                    <li>Pick first n sentences as summarized text.</li>
+                    <li>Join the sentences together to form final summarized text.</li>
+                </ol>
+                <br><br>
+                <h2>Technologies used</h2><br><br>
+                <h4>Front End</h4>
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JQuery</li>
+                    <li>Flask</li>
+                </ul><br>
+                <h4>Back End</h4>
+                <ul>
+                    <li>Python</li>
+                    <li>Spacy</li>
+                    <li>Flask</li>
+                    <li>Beautiful Soup(bs4)</li>
+                </ul><br><br><br>
+            </div>
+        </section>
+
+
+        <section class="four scts" id="four">
+            <div class="holder_four">
+                <div class="info">
+
+
+                    <div class="imgcontain">
+                        <img src="{{url_for('static',filename='images/riaaa.jpg') }}" alt="">
+
+                    </div>
+
+                    <div class="textcontain">
+                        <h3>Riya Elizabath</h3><br>
+                        <p>
+                            I'm a young and free-spirited girl. Reading liberates my soul and I love writing blogs in my free time. Interested in anything but not fakeness.
+                        </p>
+
+                    </div>
+
+
+                </div>
+                <hr>
+                <div class="info">
+
+
+
+                    <div class="textcontain">
+                        <h3>Noby Benny</h3><br>
+                        <p>
+                            I'm an easy-going, fun-loving, cheerful girl who loves singing, socializing and listening to music on my freetime. I enjoy watching good movies and I have a keen eye for enterpreneurship.
+                        </p>
+
+                    </div>
+                    <div class="imgcontain">
+
+                        <img src="{{url_for('static',filename='images/noby.jpg') }}" alt="">
+
+                    </div>
+
+
+                </div>
+                <hr>
+                <div class="info">
+
+
+                    <div class="imgcontain">
+                        <img src="{{url_for('static',filename='images/merin.jpg') }}" alt="">
+
+                    </div>
+                    <div class="textcontain">
+
+                        <h3>Merin Anna</h3><br>
+                        <p> A caffeine-driven lifeform. Music is my soul. No happier place than with flowers. If it involves murder mysteries investigations, count me in!
+                        </p>
+
+                    </div>
+
+
+                </div>
+                <hr>
+                <div class="info">
+
+
+
+                    <div class="textcontain">
+                        <h3>Meriki Demas</h3><br>
+                        <p>A recovering PUBG addict who enjoys cooking, programming and ofcourse eating in my freetime. A student of Computer Science and life...CHEERS!
+                        </p>
+
+                    </div>
+                    <div class="imgcontain">
+                        <img src="{{url_for('static',filename='images/de.jpg') }}" alt="">
+
+                    </div>
+
+
+                </div>
+            </div>
+
+        </section>
+    </div>
+</div>
+
+{%endblock%}

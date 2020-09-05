@@ -1,0 +1,288 @@
+* {
+    padding: 0;
+    margin: 0;
+    border-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+section {
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient( #264d59, #02AABD, #00CDAC);
+    position: relative;
+}
+
+.two {
+    text-align: center;
+}
+
+.wrapper {
+    width: 400vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    transform: rotate(90deg) translateY(-100vh);
+    transform-origin: top left;
+    overflow: scroll;
+}
+
+.border_container {
+    position: absolute;
+    height: 100vw;
+    width: 100vh;
+    transform: rotate(-90deg) translateX(-100vh);
+    transform-origin: top left;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+ ::-webkit-scrollbar {
+    display: none;
+}
+
+.nav {
+    position: relative;
+    top: 0;
+    width: 100%;
+    z-index: 3;
+    background-color: #56bbda;
+}
+
+.nav ul {
+    display: inline-flex;
+    position: absolute;
+    right: 120px;
+    list-style: none;
+}
+
+.nav ul li {
+    margin: 40px 20px;
+    text-transform: uppercase;
+    padding: 12px;
+    border: 2px solid whitesmoke;
+    border-radius: 50px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: transform .2s;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    display: block;
+}
+
+#logo {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    position: absolute;
+    left: 60px;
+    top: 40px;
+}
+
+.textcontent {
+    position: absolute;
+    top: 32%;
+    left: 60px;
+    width: 40vw;
+    text-align: justify;
+}
+
+span {
+    font-size: 85px;
+    width: 100%;
+}
+
+h1 {
+    font-size: 55px;
+    text-transform: uppercase;
+}
+
+p {
+    line-height: 2;
+    color: white;
+    font-size: 22px;
+}
+
+.one img {
+    width: 60%;
+    height: 60%;
+    position: relative;
+    top: 30%;
+    left: 750px;
+}
+
+.redirect {
+    text-decoration: none;
+    padding: 15px;
+    background: rgb(0, 19, 36);
+    background: linear-gradient(90deg, rgba(0, 19, 36, 0.9391106784510679) 0%, rgba(31, 153, 199, 1) 100%);
+    border-radius: 25px;
+    color: aliceblue;
+    letter-spacing: 2px;
+    transition: transform .2s;
+}
+
+.nav li:hover {
+    transform: scale(1.0);
+    color: white;
+    background: rgb(45, 16, 92);
+    background: linear-gradient(90deg, rgba(45, 16, 92, 0.9391106784510679) 0%, rgba(214, 78, 78, 1) 100%);
+}
+
+.active {
+    background: rgb(101, 115, 156);
+    background: linear-gradient(90deg, rgba(101, 115, 156, 0.9391106784510679) 0%, rgba(58, 80, 241, 1) 100%);
+    color: white
+}
+
+.holder_one {
+    height: 100vh;
+    width: 100vw;
+}
+
+
+/*TEXTAREA*/
+
+.holder {
+    width: 80%;
+    height: 60%;
+    margin: auto;
+    top: 47%;
+    position: relative;
+    transform: translateY(-50%);
+}
+
+input,
+textarea,
+button {
+    width: 60%;
+    padding: 12px;
+    border-radius: 25px;
+    border-style: none;
+    margin-left: 15px;
+}
+
+.btn {
+    width: 20%;
+    cursor: pointer;
+}
+
+textarea {
+    height: 70%;
+}
+
+.sentences {
+    height: 20px;
+    width: 40px;
+    left: 0;
+}
+
+.for_sent,
+.for_pdf {
+    left: 110px;
+    position: absolute;
+}
+
+
+/*section 3*/
+
+.three,
+.four {
+    overflow-x: scroll;
+}
+
+.three h2 {
+    text-transform: uppercase;
+    text-decoration: underline;
+    text-align: center;
+}
+
+.three h4 {
+    color: white;
+    text-decoration: underline
+}
+
+.holder_three {
+    position: absolute;
+    left: 15%;
+    top: 20%;
+    line-height: 2;
+}
+
+
+/*section 4*/
+
+.holder_four {
+    position: absolute;
+    top: 20%;
+    line-height: 2;
+}
+
+.holder_four img {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+}
+
+.info {
+    display: inline-flex;
+}
+
+.info:nth-child(even) {
+    margin-left: 300px;
+    margin-right: 0;
+}
+
+.textcontain {
+    text-align: justify;
+    padding: 20px;
+    margin: 20px;
+    line-height: 1.5;
+    font-size: 20px;
+    letter-spacing: 0.2px;
+}
+
+hr {
+    border-color: grey;
+    border-style: dotted;
+    margin: 30px 0;
+}
+
+.holder_four h3 {
+    color: black;
+    text-decoration: underline;
+}
+
+
+/*general info*/
+
+.one,
+.two,
+.three,
+.four {
+    /*scroll-snap-type: x mandatory;*/
+    scroll-behavior: smooth;
+    scroll-snap-type: both mandatory;
+}
+
+section {
+    scroll-snap-align: start;
+}
+
+button {
+    background-color: #a4508b;
+    background-image: linear-gradient(326deg, #a4508b 0%, #5f0a87 74%);
+    color: white;
+}
+
+i {
+    font-size: 25px;
+}

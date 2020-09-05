@@ -1,0 +1,85 @@
+   .container {
+       display: flex;
+   }
+   
+   .orig {
+       background-image: url(black.jpg);
+       background-position: center;
+       background-size: cover;
+       color: white;
+       flex: 1;
+   }
+   
+   .summ {
+       background-color: grey;
+       color: black;
+       flex: 1;
+   }
+   
+   body {
+       background-color: black;
+       line-height: 3;
+   }
+   
+   .content {
+       position: relative;
+       width: 80%;
+       left: 10%;
+       border-style: none;
+       border-radius: 5%;
+       text-align: justify;
+       box-shadow: 5px 10px darkslategray;
+   }
+   
+   .titles,
+   h3 {
+       position: relative;
+       padding-left: 30%;
+       padding-top: 30px;
+       text-decoration: underline;
+   }
+   
+   * {
+       margin: 0;
+       padding: 0;
+       font-family: sans-serif;
+       box-sizing: border-box;
+   }
+   
+   p {
+       padding: 25px;
+   }
+   
+   nav {
+       color: darkgrey;
+       padding: 20px;
+   }
+   
+   nav ul {
+       float: right;
+       list-style: none;
+   }
+   
+   label,
+   li {
+       display: inline-block;
+       font-size: 25px;
+       padding: 25px;
+       text-transform: uppercase;
+   }
+   
+   li:hover {
+       background-color: grey;
+       border-radius: 15px;
+   }
+   
+   .hr {
+       display: inline;
+   }
+   
+   #one {
+       background-color: grey;
+       width: 50%;
+       height: 2px;
+       border-style: dotted;
+   }

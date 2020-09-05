@@ -1,0 +1,50 @@
+{% extends 'layout_sum.html' %} {% block body %}
+
+<nav>
+    <label for=""> Text summarizer</label>
+    <ul>
+        <li><a href="https://pacific-journey-99536.herokuapp.com/">Go Back Home</a></li>
+    </ul>
+</nav>
+<div class="hr">
+    <hr class="hor" id="one">
+
+
+</div>
+
+<div class="container">
+
+
+    <div class="orig">
+        <h1 class="titles">ORIGINAL TEXT</h1>
+        <h3>number of words: {{ lenorig }}</h3><br>
+        <div class="content">
+            <h3>{{ title }}</h3><br><br>
+            <p>
+                {% autoescape false %} {{ orig }} {% endautoescape %}
+            </p>
+
+        </div>
+    </div>
+
+    <div class="summ">
+        <h1 class="titles">SUMMARIZED TEXT</h1>
+        <h3>number of words: {{lensum}}</h3><br>
+
+        <div class="content">
+            <h3>{{ title }}</h3><br><br>
+            <p>
+                {% autoescape false %} {{ summed }} {% endautoescape %}
+
+            </p>
+
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+{% endblock %}
